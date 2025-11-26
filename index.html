@@ -1,20 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sumaq Sports | Header</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6; /* Fondo gris claro */
+        }
+        
+        /* Definir paleta de colores personalizada de Tailwind */
+        :root {
+            --color-sumaq-blue: #1B498A; /* Azul principal del logo */
+            --color-sumaq-dark: #121212; /* Negro para textos y elementos */
+        }
+        /* Definición de la clase de fondo azul */
+        .bg-sumaq-blue { background-color: var(--color-sumaq-blue); } 
+        /* El hover azul claro para el texto */
+        .text-sumaq-light:hover { color: #f3f4f6; } 
+    </style>
 </head>
 <body>
-    <header class="main-header">
-    <div class="logo">Mi Tienda Deportiva</div>
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="/carrito.html">🛒 Carrito</a></li>
-        </ul>
-    </nav>
-</header>
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-sumaq-blue shadow-lg p-4 sticky top-0 z-50">
+            <div class="container mx-auto flex justify-between items-center">
+                
+                <a href="#" class="flex items-center">
+                    <span class="text-xl font-bold text-white">Sumaq Sports Logo</span>
+                </a>
+
+                <nav class="hidden md:flex space-x-6 text-white">
+                    <a href="#" class="hover:text-sumaq-light font-medium">Categorías</a>
+                    <a href="#" class="hover:text-sumaq-light font-medium">Lo nuevo</a>
+                    <a href="#" class="hover:text-sumaq-light font-medium">Ofertas</a>
+                    <a href="#" class="hover:text-sumaq-light font-medium">Pedidos y Cuenta</a>
+                    <a href="#" class="hover:text-sumaq-light font-medium">Ayuda</a>
+                </nav>
+
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-white hover:text-sumaq-light">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+        </div>
 </body>
 </html>
