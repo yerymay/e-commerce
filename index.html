@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumaq Sports | Productos</title>
-    <!-- Carga de Tailwind CSS para el styling --><script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuración para usar la fuente Inter --><style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Importación de la fuente Inter */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        /* Estilos Base */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6; /* Fondo gris claro */
-            color: #1a202c; /* Color de texto base, un gris oscuro */
+            color: #1a202c; /* Color de texto base */
         }
-        /* Definir paleta de colores personalizada de Tailwind */
+        
+        /* Definir paleta de colores personalizada de Tailwind usando CSS Variables */
         :root {
             --color-sumaq-blue: #1B498A; /* Azul principal del logo */
-            --color-sumaq-dark: #121212; /* Negro para textos y elementos */
-            --color-sumaq-light-gray: #e5e7eb; /* Gris claro para fondos/bordes */
         }
+        
+        /* Clases utilitarias personalizadas */
         .bg-sumaq-blue { background-color: var(--color-sumaq-blue); }
         .text-sumaq-blue { color: var(--color-sumaq-blue); }
-        .border-sumaq-blue { border-color: var(--color-sumaq-blue); }
-        .hover\:bg-sumaq-blue-dark:hover { background-color: #153c73; } /* Un azul ligeramente más oscuro para hover */
+        .hover\:bg-sumaq-blue-dark:hover { background-color: #153c73; } /* Azul más oscuro para hover */
 
-        /* Estilos para asegurar que las imágenes de placeholder sean visualmente atractivas */
+        /* Estilos para las tarjetas y placeholders (como si fueran en un CSS separado) */
         .product-image-placeholder {
-            min-height: 144px; /* H-36 de Tailwind */
+            min-height: 144px; /* h-36 */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -35,61 +40,28 @@
             font-weight: 700;
             padding: 1rem;
             position: relative;
-            overflow: hidden; /* Asegura que el emoji no se desborde */
+            overflow: hidden; 
         }
         .product-image-placeholder .emoji {
-            font-size: 4.5rem; /* Emoji más grande para impacto visual */
+            font-size: 4.5rem; 
             line-height: 1;
-            z-index: 1; /* Asegura que el emoji esté por encima del fondo */
-        }
-        .product-image-placeholder .text-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para el texto */
-            color: white;
-            font-size: 0.875rem; /* Texto más pequeño */
-            padding: 0.5rem;
-            z-index: 2; /* Texto por encima del emoji */
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <div class="min-h-screen flex flex-col">
-        <!-- BARRA DE NAVEGACIÓN SUPERIOR / HEADER --><header class="bg-white shadow-sm p-4 sticky top-0 z-50">
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- LOGO SUMAQ SPORTS (URL corregida y confirmada) --><a href="#" class="flex items-center">
-                    <img src="uploaded:image_3d0435.jpg-8e42e1b7-d8a1-43de-91e9-9d7d1519764e" alt="Sumaq Sports Logo" class="h-10 w-auto">
-                </a>
+        
+        
 
-                <!-- ENLACES DE NAVEGACIÓN --><nav class="hidden md:flex space-x-6 text-gray-700">
-                    <a href="#" class="hover:text-sumaq-blue font-medium">Categorías</a>
-                    <a href="#" class="hover:text-sumaq-blue font-medium">Lo nuevo</a>
-                    <a href="#" class="hover:text-sumaq-blue font-medium">Ofertas</a>
-                    <a href="#" class="hover:text-sumaq-blue font-medium">Pedidos y Cuenta</a>
-                    <a href="#" class="hover:text-sumaq-blue font-medium">Ayuda</a>
-                </nav>
+        <main class="flex-grow container mx-auto max-w-7xl p-4 sm:p-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-8">Nuestros Productos </h1>
 
-                <!-- ICONOS DE USUARIO/CARRITO --><div class="flex items-center space-x-4">
-                    <a href="#" class="text-gray-700 hover:text-sumaq-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 0a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- SECCIÓN DE CONTENIDO PRINCIPAL (PRODUCTOS) --><main class="flex-grow container mx-auto p-4 sm:p-8">
-            <h1 class="text-3xl font-bold text-gray-800 mb-8">Nuestros Productos</h1>
-
-            <!-- CUADRÍCULA DE PRODUCTOS --><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
                 
-                <!-- PRODUCTO 1: SHORT DEPORTIVO (Azul) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-blue-600 product-image-placeholder">
                         <span class="emoji">🩳</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Short Deportivo</h3>
@@ -103,10 +75,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 2: PANTALÓN DEPORTIVO (Gris) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-gray-600 product-image-placeholder">
                          <span class="emoji">👖</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Pantalón Deportivo</h3>
@@ -120,10 +91,9 @@
                     </div>
                 </div>
                 
-                <!-- PRODUCTO 3: GORRA DE RUNNING (Negra) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-gray-800 product-image-placeholder">
                         <span class="emoji">🧢</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Gorra de Running</h3>
@@ -137,10 +107,9 @@
                     </div>
                 </div>
                 
-                <!-- PRODUCTO 4: POLO TÉCNICO (Rojo) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-red-700 product-image-placeholder">
                         <span class="emoji">👕</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Polo Técnico Transpirable</h3>
@@ -154,10 +123,9 @@
                     </div>
                 </div>
                 
-                <!-- PRODUCTO 5: ZAPATILLAS DE ENTRENAMIENTO (Verde) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-green-600 product-image-placeholder">
                         <span class="emoji">👟</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Zapatillas de Entrenamiento</h3>
@@ -171,10 +139,9 @@
                     </div>
                 </div>
                 
-                <!-- PRODUCTO 6: CALCETINES DE COMPRESIÓN (Gris) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-gray-500 product-image-placeholder">
                         <span class="emoji">🧦</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Calcetines de Compresión</h3>
@@ -188,10 +155,9 @@
                     </div>
                 </div>
                 
-                <!-- PRODUCTO 7: CHAQUETA IMPERMEABLE (Amarillo) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-yellow-500 product-image-placeholder">
                         <span class="emoji">🧥</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Chaqueta Impermeable</h3>
@@ -205,10 +171,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 8: MOCHILA DE HIDRATACIÓN (Azul oscuro) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-blue-900 product-image-placeholder">
                         <span class="emoji">🎒</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Mochila de Hidratación</h3>
@@ -222,10 +187,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 9: GUANTES DE GYM (Negro/Gris) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-gray-700 product-image-placeholder">
                         <span class="emoji">🧤</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Guantes de Gimnasio</h3>
@@ -239,10 +203,9 @@
                     </div>
                 </div>
                 
-                <!-- PRODUCTO 10: SHORT DEPORTIVO (Negro) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-black product-image-placeholder">
                         <span class="emoji">🩳</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Short Deportivo</h3>
@@ -256,10 +219,9 @@
                     </div>
                 </div>
 
-                <!-- PRODUCTO 11: BOTELLA DE AGUA (Azul claro) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-cyan-500 product-image-placeholder">
                         <span class="emoji">💧</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Botella de Agua</h3>
@@ -273,10 +235,9 @@
                     </div>
                 </div>
                 
-                <!-- PRODUCTO 12: BANDA ELÁSTICA (Morado) --><div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                     <div class="w-full h-36 bg-purple-600 product-image-placeholder">
                         <span class="emoji">🏋️‍♀️</span>
-                        <span class="text-overlay"></span>
                     </div>
                     <div class="p-4 flex flex-col flex-grow">
                         <h3 class="font-semibold text-gray-800 text-sm mb-1">Banda Elástica</h3>
@@ -292,6 +253,10 @@
                 
             </div>
         </main>
+        
+        <footer class="bg-gray-800 text-white p-4 text-center text-sm mt-8">
+            <p>&copy; 2025 Sumaq Sports. Todos los derechos reservados.</p>
+        </footer>
     </div>
 </body>
 </html>
