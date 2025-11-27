@@ -1,39 +1,40 @@
-/* Importación de la fuente Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
 
-/* Estilos Base */
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6; /* Fondo gris claro */
-    color: #1a202c; /* Color de texto base */
-}
+        /* Importación de la fuente Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        /* Estilos Base */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Fondo gris claro */
+            color: #1a202c; /* Color de texto base */
+        }
+        
+        /* Definir paleta de colores personalizada de Tailwind usando CSS Variables */
+        :root {
+            --color-sumaq-blue: #1B498A; /* Azul principal del logo */
+        }
+        
+        /* Clases utilitarias personalizadas */
+        .bg-sumaq-blue { background-color: var(--color-sumaq-blue); }
+        .text-sumaq-blue { color: var(--color-sumaq-blue); }
+        .hover\:bg-sumaq-blue-dark:hover { background-color: #153c73; } /* Azul más oscuro para hover */
 
-/* Definir paleta de colores personalizada de Tailwind usando CSS Variables */
-:root {
-    --color-sumaq-blue: #1B498A; /* Azul principal del logo */
-}
-
-/* Clases utilitarias personalizadas */
-.bg-sumaq-blue { background-color: var(--color-sumaq-blue); }
-.text-sumaq-blue { color: var(--color-sumaq-blue); }
-.hover\:bg-sumaq-blue-dark:hover { background-color: #153c73; } /* Azul más oscuro para hover */
-
-/* Estilos para las tarjetas y placeholders (como si fueran en un CSS separado) */
-.product-image-placeholder {
-    min-height: 144px; /* h-36 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 700;
-    padding: 1rem;
-    position: relative;
-    overflow: hidden; 
-}
-.product-image-placeholder .emoji {
-    font-size: 4.5rem; 
-    line-height: 1;
-    z-index: 1;
-}
+        /* Estilos para las tarjetas y placeholders (como si fueran en un CSS separado) */
+        .product-image-placeholder {
+            min-height: 144px; /* h-36 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding: 1rem;
+            position: relative;
+            overflow: hidden; 
+        }
+        .product-image-placeholder .emoji {
+            font-size: 4.5rem; 
+            line-height: 1;
+            z-index: 1;
+        }
